@@ -1,30 +1,44 @@
-*{
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: #747704;
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #747704;
 }
 
-.text-muted{
-  color: #BCBBBB;
-}
-.text-thin{
-  font-weight: 100;
+.text-muted {
+    color: #BCBBBB;
 }
 
-.title-logo{
-  margin-top: 20px;
+.text-thin {
+    font-weight: 100;
 }
 
-.title-super{
-  font-size: 60px;
+.title-logo {
+    margin-top: 20px;
 }
 
-.top_hr{
+.title-super {
+    font-size: 60px;
+}
 
+.top_hr {}
+
+.linebreaker {
+    display: none
 }
 
 @media (max-width: 400px) {
-  .title-logo{
-    display: none;
-  }
+    .title-logo {
+        /*display: none;*/
+    }
+    .title-super {
+        font-size: 36px;
+        color: red;
+        display: block;
+    }
+    #slogan {
+        font-size: 12px;
+    }
+    .title-super .linebreaker {
+        display: block;
+    }
 }
