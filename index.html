@@ -46,53 +46,112 @@
             </div>
             <div class="row text-center">
                 <div class="col-md-4 featured-item text-center">
-                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Appify logo" data-toggle="modal" data-target="#project1" data-title='Appify' data-description='Appify is something'>
+                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Appify logo" data-toggle="modal" data-target="#picture_overlay" data-title='Appify' data-description='Appify is something'>
                     <h3>Appify</h3>
                     <a href="http://www.google.com">http://www.google.com</a>
                 </div>
                 <div class="col-md-4 featured-item text-center">
-                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Sunflower logo" data-toggle="modal" data-target="#project1" data-title='Sunflower' data-description='Sunflower is something'>
+                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Sunflower logo" data-toggle="modal" data-target="#video_overlay" data-title='Sunflower' data-description='Sunflower is something'>
                     <h3>Sunflower</h3>
                     <a href="http://www.google.com">http://www.google.com</a>
                 </div>
                 <div class="col-md-4 featured-item text-center">
-                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Boken logo" data-toggle="modal" data-target="#project1" data-title='Boken' data-description='Boken is something'>
-                    <h3>Bokeh</h3>
-                    <a href="http://www.google.com">http://www.google.com</a>
-                </div>
-            </div>
-        </div>
+                    <img
+                        class="img-responsive"
+                        src="images/TallyBoardIconSquare-small.png"
+                        alt="TallyBoard logo"
+                        data-toggle="modal"
+                        data-target="#video_overlay"
+                        data-title='Tally Board'
+                        data-video='http://www.youtube.com/embed/rVFfYdkR04o'
+                        data-description="
+                          <h3>Tally Board <small>Math-puzzler for iOS</small></h3>
+                          <blockquote>
+                            <p>A challenger to one of the most addictive apps out there, Tally Board surpasses the usual sliding block game formula with a greater focus on mental arithmetic and planning ahead.</p>
+                            <footer>
+                              <cite>
+                                <a href='https://evaluapp.wordpress.com/2014/08/02/tally-board/'>EVALUAPP</a>
+                                </cite>
+                              </footer>
+                          </blockquote>
+                            <p>Tally Board was developed as a project to learn development for mobile devices. The app got very good reviews both online and in the App-Store, avareging about 4.3 out of 5.</p>
 
-        <!-- Modal -->
-        <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="myModalLabel">Favorite App Page</h2>
-                    </div>
-                    <div class="modal-body">
-                        <img class="img-responsive modal-img" src="http://placehold.it/1555x300">
-                        <p class="modal-description"></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+                          <p>Because I needed to focus on school, and not marketing and maintenance, I eventually withdrew the app. I would love to revisit this project in due time, as I firmly believe that the idea was unique, and the app was both eucational and entertaining.</p>
+                          ">
+    <h3>Tally Board</h3>
+    <a href="http://www.google.com">http://www.google.com</a>
+</div>
+</div>
+</div>
 
-    <script type="text/javascript">
-        $('#project1').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var title = button.data('title')
-            var description = button.data('description')
-            var img = button.attr('src')
-            var modal = $(this)
-            modal.find('.modal-title').text(title)
-            modal.find('.modal-img').attr('src', img)
-            modal.find('.modal-description').text(description)
-        })
-    </script>
+<!-- Modal -->
+<div class="modal fade" id="picture_overlay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Favorite App Page</h2>
+    </div>
+    <div class="modal-body">
+        <img class="img-responsive modal-img" src="http://placehold.it/1555x300">
+        <div class="modal-description"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="video_overlay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Favorite App Page</h2>
+    </div>
+    <div class="modal-body">
+        <iframe class="modal-video center-block" src=""></iframe>
+        <p class="modal-description"></p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+</div>
+</body>
+
+<script type="text/javascript">
+$('#picture_overlay').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var title = button.data('title')
+    var description = button.data('description')
+    var img = button.attr('src')
+    var modal = $(this)
+
+    modal.find('.modal-title').text(title)
+    modal.find('.modal-img').attr('src', img)
+    modal.find('.modal-description').text(description)
+});
+$('#video_overlay').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var title = button.data('title')
+    var description = button.data('description')
+    var video = button.data('video')
+    var modal = $(this)
+    console.log(video);
+    console.log('video');
+
+    modal.find('.modal-title').text(title)
+    modal.find('.modal-video').attr('src', video)
+    var videoElement = modal.find('.modal-description')
+    videoElement.html(description)
+    if (video) {
+      modal.find('.modal-video').removeClass('hidden');
+    } else {
+      modal.find('.modal-video').addClass('hidden');
+      // videoElement.addClass = 'hidden'
+    }
+});
+</script>
 
 </html>

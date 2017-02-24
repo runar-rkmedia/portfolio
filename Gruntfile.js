@@ -16,15 +16,11 @@ module.exports = function(grunt) {
                     sizes: [{
                       name: 'small',
                         width: 375,
-                        height: 500,
-                        aspectRatio: false,
+                        // aspectRatio: false,
                         quality: 50,
                     }, {
                         name: 'medium',
-                        width: 480,
-                        height: 640,
-                        aspectRatio: false,
-                        gravity: "Center",
+                        width: 555,
                         quality: 50
                     }, {
                         name: 'large',
