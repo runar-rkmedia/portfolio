@@ -59,8 +59,9 @@
             <div class="row text-center">
                 <div class="col-md-4   featured-item text-center" >
 
-                    <picture class="work-item-pic">
+                    <picture class="work-item-pic" >
                         <svg
+                            type='button' href="#childof1"
                             class="img-responsive"
                             viewBox="0, 0, 100.224, 100.8"
                             alt="Tournament logo"
@@ -169,11 +170,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" id="myModalLabel"></h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <!-- <h2 class="modal-title" id="myModalLabel"></h2>
+                                         -->
                 </div>
                 <div class="modal-body"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-default close-button" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -190,6 +194,10 @@
         modal.find('.modal-title').text(title);
         modal.find('.modal-body').html(description);
     });
+    // Stop a video playing when modal hides(user closes)
+    $("#overlay_project").on('hidden.bs.modal', function (e) {
+    $("#overlay_project iframe").attr("src", $("#overlay_project iframe").attr("src"));
+});
 </script>
 
 </html>
