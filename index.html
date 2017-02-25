@@ -11,6 +11,11 @@
         <!-- javascript -->
         <script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <script src="bootstrap/js/picturefill.min.js" async></script>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="bootstrap/css/portfolio.css">
@@ -36,7 +41,14 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <img id="front-image" class="img-responsive" src="http://placehold.it/1140x350" alt="metaimage">
+                    <picture alt="fancy pants">
+                        <!-- loaded by browsers that support picture and that support one of the sources -->
+                        <source srcset="images/Runar-large.jpg 1x, images/Runar-large_x2.jpg 2x" type="image/jpeg" media="(min-width: 996px)"/>
+                        <source srcset="images/Runar-medium.jpg" type="image/jpeg" media="(min-width: 768px)"/>
+                        <source srcset="images/Runar-small.jpg 1x" media="(min-width: 375px)" type="image/jpeg"/>
+                        <source srcset="images/Runar-tiny.jpg" type="image/jpeg"/>
+                        <img class="img-responsive" src="images/Runar-tiny.jpg" alt="fancy pants"/>
+                    </picture>
                 </div>
             </div>
             <div class="row">
@@ -45,113 +57,119 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4 featured-item text-center">
-                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Appify logo" data-toggle="modal" data-target="#picture_overlay" data-title='Appify' data-description='Appify is something'>
-                    <h3>Appify</h3>
-                    <a href="http://www.google.com">http://www.google.com</a>
-                </div>
-                <div class="col-md-4 featured-item text-center">
-                    <img class="img-responsive" src="http://placehold.it/555x300" alt="Sunflower logo" data-toggle="modal" data-target="#video_overlay" data-title='Sunflower' data-description='Sunflower is something'>
-                    <h3>Sunflower</h3>
-                    <a href="http://www.google.com">http://www.google.com</a>
-                </div>
-                <div class="col-md-4 featured-item text-center">
-                    <img
-                        class="img-responsive"
-                        src="images/TallyBoardIconSquare-small.png"
-                        alt="TallyBoard logo"
+                <div class="col-md-4   featured-item text-center">
+
+                    <svg
+                        class="img-responsive work-item-pic"
+                        width="100.224"
+                        height="100.8"
+                        viewBox="0, 0, 100.224, 100.8"
+                        alt="Tournament logo"
                         data-toggle="modal"
-                        data-target="#video_overlay"
-                        data-title='Tally Board'
-                        data-video='http://www.youtube.com/embed/rVFfYdkR04o'
+                        data-target="#overlay_project"
+                        data-title='Tournament'
                         data-description="
-                          <h3>Tally Board <small>Math-puzzler for iOS</small></h3>
-                          <blockquote>
-                            <p>A challenger to one of the most addictive apps out there, Tally Board surpasses the usual sliding block game formula with a greater focus on mental arithmetic and planning ahead.</p>
-                            <footer>
-                              <cite>
-                                <a href='https://evaluapp.wordpress.com/2014/08/02/tally-board/'>EVALUAPP</a>
-                                </cite>
-                              </footer>
-                          </blockquote>
-                            <p>Tally Board was developed as a project to learn development for mobile devices. The app got very good reviews both online and in the App-Store, avareging about 4.3 out of 5.</p>
+                        <svg class='center-block'version='1.1'  x='0' y='0' width='100.224' height='100.8' viewBox='0, 0, 100.224, 100.8'>
+                          <g id='Layer_1' transform='translate(-6.653, -6.2)'>
+                            <path d='M106.877,47.816 L106.877,6.2 L6.653,6.2 L6.653,47.816 L27.965,47.816 L30.845,29.528 L41.933,29.528 L41.933,82.232 L29.693,85.112 L29.693,107 L84.125,107 L84.125,85.112 L71.741,82.232 L71.741,29.528 L82.829,29.528 L85.709,47.816 z' fill='#000000'/>
+                          </g>
+                        </svg>
+            <h3>Torunament results<small> &mdash; Swiss tournament</small></h3>
+            <blockquote>
+              <p>Python project to store matches in a tournament and pair players against an equal opponent.</p>
+              <a href="https://github.com/runartrollet/Tournament_fullstack-nanodegree-vm">Github: Tournament fullstack</a>
+            ">
+                        <g id="Layer_1" transform="translate(-6.653, -6.2)">
+                            <path
+                                d="M106.877,47.816 L106.877,6.2 L6.653,6.2 L6.653,47.816 L27.965,47.816 L30.845,29.528 L41.933,29.528 L41.933,82.232 L29.693,85.112 L29.693,107 L84.125,107 L84.125,85.112 L71.741,82.232 L71.741,29.528 L82.829,29.528 L85.709,47.816 z"
+                                fill="#000000"/>
+                        </g>
 
-                          <p>Because I needed to focus on school, and not marketing and maintenance, I eventually withdrew the app. I would love to revisit this project in due time, as I firmly believe that the idea was unique, and the app was both eucational and entertaining.</p>
-                          ">
-    <h3>Tally Board</h3>
-    <a href="http://www.google.com">http://www.google.com</a>
-</div>
-</div>
-</div>
+                    </svg>
+                    <h3>Tournament results</h3>
+                    <a href="https://github.com/runartrollet/Tournament_fullstack-nanodegree-vm">Github: Tournament fullstack</a>
+                </div>
+                <div class="col-md-4   featured-item text-center ">
+                    <img
+                        class="img-responsive work-item-pic vcenter"
+                        src="images/MotoLift-tiny.jpg"
+                        alt="MotoLift logo"
+                        data-toggle="modal"
+                        data-target="#overlay_project"
+                        data-title='MotoLift'
+                        data-description="
+                        <iframe class='modal-video center-block' src='http://www.youtube.com/embed/kmVxxCcoFA8' allowfullscreen></iframe>
+                        <h3>MotoLift<small> &mdash; A mechanical ergonomic motorcycle-lifter</small></h3>
+                          <p>MotoLift was a graduation-project which goal was to lift a motorcycle using a roof-mounted scissorlifter. </p>
+                        <p>The project involved static calculations, project-management, CAD-work, budgeting, planning, marketing-presentations, documentation among other.</p>
+                        <h4>Project group:</h4>
+                        <ol>
+                          <li>Runar Kristoffersen &ndash; Project manager</li>
+                          <li>Max Even Jacobsen &ndash; Project member</li>
+                          <li>Knut Inge Lundevold &ndash; Project idea and member</li>
+                          <li>Terhe Larsen &ndash; Project member</li>
+                        </ol>
+                        ">
+                    <h3 class="vcenter">MotoLift</h3>
+                    <a class="vcenter" href="https://www.youtube.com/watch?v=kmVxxCcoFA8&t=104s">Product video</a>
+                </div>
+                <div class="col-md-4   featured-item text-center">
+                    <picture>
+                        <img
+                            class="img-responsive work-item-pic"
+                            src="images/TallyBoardIconSquare-tiny.jpg"
+                            alt="TallyBoard logo"
+                            data-toggle="modal"
+                            data-target="#overlay_project"
+                            data-title='Tally Board'
+                            data-description="
+                            <iframe class='modal-video center-block' src='http://www.youtube.com/embed/rVFfYdkR04o' allowfullscreen></iframe>
+                            <h3>Tally Board <small> &mdash; Math-puzzler for iOS</small></h3>
+                            <blockquote>
+                              <p>A challenger to one of the most addictive apps out there, Tally Board surpasses the usual sliding block game formula with a greater focus on mental arithmetic and planning ahead.</p>
+                              <footer>
+                                <cite>
+                                  <a href='https://evaluapp.wordpress.com/2014/08/02/tally-board/'>EVALUAPP</a>
+                                  </cite>
+                                </footer>
+                            </blockquote>
+                              <p>Tally Board was developed as a project to learn development for mobile devices. The app got very good reviews both online and in the App-Store, avareging about 4.3 out of 5.</p>
 
-<!-- Modal -->
-<div class="modal fade" id="picture_overlay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-    <div class="modal-header">
-        <h2 class="modal-title" id="myModalLabel">Favorite App Page</h2>
-    </div>
-    <div class="modal-body">
-        <img class="img-responsive modal-img" src="http://placehold.it/1555x300">
-        <div class="modal-description"></div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    </div>
-</div>
-</div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="video_overlay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-    <div class="modal-header">
-        <h2 class="modal-title" id="myModalLabel">Favorite App Page</h2>
-    </div>
-    <div class="modal-body">
-        <iframe class="modal-video center-block" src=""></iframe>
-        <p class="modal-description"></p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    </div>
-</div>
-</div>
-</div>
-</body>
+                            <p>Because I needed to focus on school, and not marketing and maintenance, I eventually withdrew the app. I would love to revisit this project in due time, as I firmly believe that the idea was unique, and the app was both eucational and entertaining.</p>
+                            ">
+                    </picture>
+                    <h3>Tally Board</h3>
+                    <a href="https://www.youtube.com/watch?v=rVFfYdkR04o">Product video</a>
+                </div>
+            </div>
+        </div>
 
-<script type="text/javascript">
-$('#picture_overlay').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var title = button.data('title')
-    var description = button.data('description')
-    var img = button.attr('src')
-    var modal = $(this)
+        <!-- Modal -->
+        <div class="modal fade" id="overlay_project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="myModalLabel"></h2>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 
-    modal.find('.modal-title').text(title)
-    modal.find('.modal-img').attr('src', img)
-    modal.find('.modal-description').text(description)
-});
-$('#video_overlay').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var title = button.data('title')
-    var description = button.data('description')
-    var video = button.data('video')
-    var modal = $(this)
-    console.log(video);
-    console.log('video');
+    <script type="text/javascript">
+        $('#overlay_project').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var title = button.data('title');
+            var description = button.data('description');
+            var modal = $(this);
 
-    modal.find('.modal-title').text(title)
-    modal.find('.modal-video').attr('src', video)
-    var videoElement = modal.find('.modal-description')
-    videoElement.html(description)
-    if (video) {
-      modal.find('.modal-video').removeClass('hidden');
-    } else {
-      modal.find('.modal-video').addClass('hidden');
-      // videoElement.addClass = 'hidden'
-    }
-});
-</script>
+            modal.find('.modal-title').text(title);
+            modal.find('.modal-body').html(description);
+        });
+    </script>
 
 </html>
