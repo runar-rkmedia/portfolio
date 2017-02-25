@@ -10,14 +10,12 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         responsive_images: {
-            dev: {
+            pictures: {
                 options: {
                     engine: 'im',
                     sizes: [{
                       name: 'tiny',
                         width: 375,
-                        height:375,
-                        aspectRatio: false,
                         quality: 50,
                     }, {
                         name: 'small',
@@ -38,16 +36,35 @@ module.exports = function(grunt) {
                         quality: 20
                     }]
                 },
-
-                /*
-                You don't need to change this part if you don't change
-                the directory structure.
-                */
                 files: [{
                     expand: true,
                     src: ['*.{gif,jpg,png}'],
                     cwd: 'images_src/',
                     dest: 'images/'
+                }]
+            },
+            icons: {
+                options: {
+                    engine: 'im',
+                    sizes: [{
+                      name: '375',
+                        width: 375,
+                        height:375,
+                        aspectRatio: false,
+                        quality: 50,
+                    }, {
+                      name: '187',
+                        width: 187,
+                        height:187,
+                        aspectRatio: false,
+                        quality: 50,
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['*.{gif,jpg,png}'],
+                    cwd: 'images_src/icons',
+                    dest: 'images/icons'
                 }]
             }
         },
