@@ -7,13 +7,13 @@ $('#overlay_project').on('show.bs.modal', function(event) {
         case 'Tally Board':
             title = 'Tally Board';
             html_content = `
-          <iframe class='modal-video center-block' src='http://www.youtube.com/embed/rVFfYdkR04o' allowfullscreen></iframe>
+          <iframe class="modal-video center-block" src="http://www.youtube.com/embed/rVFfYdkR04o" allowfullscreen></iframe>
           <h3>Tally Board <small> &mdash; Math-puzzler for iOS</small></h3>
           <blockquote>
             <p>A challenger to one of the most addictive apps out there, Tally Board surpasses the usual sliding block game formula with a greater focus on mental arithmetic and planning ahead.</p>
             <footer>
               <cite>
-                <a href='https://evaluapp.wordpress.com/2014/08/02/tally-board/'>EVALUAPP</a>
+                <a href="https://evaluapp.wordpress.com/2014/08/02/tally-board/">EVALUAPP</a>
                 </cite>
               </footer>
           </blockquote>
