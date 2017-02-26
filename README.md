@@ -1,7 +1,5 @@
 # Portfolio project
 
-A portfolio-webpage as part of an assignment on Udacity.
+A portfolio-webpage as part of an assignment on Udacity. Given a design-template as a `.pdf` I was tasked to replicate the design as a responsive webpage.
 
-The webpage is responsive, using bootstrap.
-
-Next step is to add javascript from jQuerry and Bootstrap.
+The design can be found here:[PDF Template](design-mockup-portfolio.pdf)
