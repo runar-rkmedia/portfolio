@@ -15,11 +15,11 @@ body {
 }
 
 .col-title {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .col-logo {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 .text-thin {
@@ -27,13 +27,13 @@ body {
 }
 
 .title-logo {
-  max-width: 100%;
+    max-width: 100%;
     /*margin-top: 20px;*/
     fill: #02b3e4;
 }
 
 .title-super {
-  margin-top: 0;
+    margin-top: 0;
     font-size: 48px;
 }
 
@@ -47,7 +47,6 @@ body {
 
 .modal-body p {
     font-size: 16px;
-    color: black;
     line-height: 1.3;
 }
 
@@ -58,9 +57,10 @@ body {
 .tournament-logo {
     fill: #7d97ad;
 }
+
 .shadow {
-  -webkit-filter: drop-shadow( 5px 5px 5px #333 );
-          filter: drop-shadow( 5px 5px 5px #333 );
+    -webkit-filter: drop-shadow( 5px 5px 5px #333);
+    filter: drop-shadow( 5px 5px 5px #333);
 }
 
 .modal-header .close {
@@ -110,6 +110,7 @@ a {
 }
 
 .social-entry i {
+    margin-right: 5px;
     font-size: 24px;
     text-shadow: 3px 3px 3px #aaa;
 }

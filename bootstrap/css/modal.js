@@ -1,12 +1,12 @@
 /*jshint esversion: 6 */
-$('#overlay_project').on('show.bs.modal', function (event) {
+$('#overlay_project').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget); // Button that triggered the modal
     var content = button.data('content');
     var html_content;
     switch (content) {
-      case 'Tally Board':
-      title = 'Tally Board';
-      html_content = `
+        case 'Tally Board':
+            title = 'Tally Board';
+            html_content = `
           <iframe class='modal-video center-block' src='http://www.youtube.com/embed/rVFfYdkR04o' allowfullscreen></iframe>
           <h3>Tally Board <small> &mdash; Math-puzzler for iOS</small></h3>
           <blockquote>
@@ -21,10 +21,10 @@ $('#overlay_project').on('show.bs.modal', function (event) {
 
           <p>Because I needed to focus on school, and not marketing and maintenance, I eventually withdrew the app. I would love to revisit this project in due time, as I firmly believe that the idea was unique, and the app was both eucational and entertaining.</p>
           `;
-          break;
-      case 'MotoLift':
-      title = 'MotoLift';
-      html_content = `
+            break;
+        case 'MotoLift':
+            title = 'MotoLift';
+            html_content = `
         <iframe class='modal-video center-block' src='http://www.youtube.com/embed/kmVxxCcoFA8' allowfullscreen></iframe>
         <h3>MotoLift<small> &mdash; A mechanical ergonomic motorcycle-lifter</small></h3>
           <p>MotoLift was a graduation-project which goal was to lift a motorcycle using a roof-mounted scissorlifter.</p>
@@ -37,10 +37,10 @@ $('#overlay_project').on('show.bs.modal', function (event) {
           <li>Terhe Larsen &ndash; Project member</li>
         </ol>
           `;
-          break;
-      case 'Tournament':
-      title = 'Tournamen Results';
-      html_content = `
+            break;
+        case 'Tournament':
+            title = 'Tournamen Results';
+            html_content = `
       <svg class='center-block tournament-logo shadow' version='1.1'  x='0' y='0' width='100.224' height='100.8' viewBox='0, 0, 100.224, 100.8'>
         <g id='Layer_1' transform='translate(-6.653, -6.2)'>
           <path d='M106.877,47.816 L106.877,6.2 L6.653,6.2 L6.653,47.816 L27.965,47.816 L30.845,29.528 L41.933,29.528 L41.933,82.232 L29.693,85.112 L29.693,107 L84.125,107 L84.125,85.112 L71.741,82.232 L71.741,29.528 L82.829,29.528 L85.709,47.816 z'/>
@@ -52,8 +52,8 @@ $('#overlay_project').on('show.bs.modal', function (event) {
                 <a href="
                             https://github.com/runartrollet/Tournament_fullstack-nanodegree-vm">Github: Tournament fullstack</a>
           `;
-        break;
-      default:
+            break;
+        default:
 
     }
     var description = button.data('description');
@@ -62,6 +62,6 @@ $('#overlay_project').on('show.bs.modal', function (event) {
     modal.find('.modal-body').html(html_content);
 });
 // Stop a video playing when modal hides(user closes)
-$("#overlay_project").on('hidden.bs.modal', function (e) {
-$("#overlay_project iframe").attr("src", $("#overlay_project iframe").attr("src"));
+$("#overlay_project").on('hidden.bs.modal', function(e) {
+    $("#overlay_project iframe").attr("src", $("#overlay_project iframe").attr("src"));
 });
