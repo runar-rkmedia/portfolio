@@ -1,11 +1,12 @@
-* {
+body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #2d3c49;
+    margin-top: 20px;
 }
 
 .top_hr {
-    margin: 20px 15px;
+    margin: 5px 15px 10px;
     border-top: 3px solid #7d97ad;
 }
 
@@ -13,15 +14,26 @@
     color: #7d97ad;
 }
 
+.col-title {
+  padding-left: 0;
+}
+
+.col-logo {
+  padding-right: 0;
+}
+
 .text-thin {
     font-weight: 100;
 }
 
 .title-logo {
-    margin-top: 20px;
+  max-width: 100%;
+    /*margin-top: 20px;*/
+    fill: #02b3e4;
 }
 
 .title-super {
+  margin-top: 0;
     font-size: 48px;
 }
 
@@ -149,5 +161,15 @@ a {
     }
     .hidden-md-down {
         display: none;
+    }
+}
+
+@media(max-width:650px) {
+    .title-super {
+        font-size: 23px;
+        /*font-weight: 100;*/
+    }
+    .slogan {
+        font-size: 15px;
     }
 }
