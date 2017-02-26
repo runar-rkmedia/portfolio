@@ -41,9 +41,9 @@ $('#overlay_project').on('show.bs.modal', function (event) {
       case 'Tournament':
       title = 'Tournamen Results';
       html_content = `
-      <svg class='center-block'version='1.1'  x='0' y='0' width='100.224' height='100.8' viewBox='0, 0, 100.224, 100.8'>
+      <svg class='center-block tournament-logo shadow' version='1.1'  x='0' y='0' width='100.224' height='100.8' viewBox='0, 0, 100.224, 100.8'>
         <g id='Layer_1' transform='translate(-6.653, -6.2)'>
-          <path d='M106.877,47.816 L106.877,6.2 L6.653,6.2 L6.653,47.816 L27.965,47.816 L30.845,29.528 L41.933,29.528 L41.933,82.232 L29.693,85.112 L29.693,107 L84.125,107 L84.125,85.112 L71.741,82.232 L71.741,29.528 L82.829,29.528 L85.709,47.816 z' fill='#022678'/>
+          <path d='M106.877,47.816 L106.877,6.2 L6.653,6.2 L6.653,47.816 L27.965,47.816 L30.845,29.528 L41.933,29.528 L41.933,82.232 L29.693,85.112 L29.693,107 L84.125,107 L84.125,85.112 L71.741,82.232 L71.741,29.528 L82.829,29.528 L85.709,47.816 z'/>
         </g>
       </svg>
               <h3>Torunament results<small> &mdash; Swiss tournament</small></h3>
