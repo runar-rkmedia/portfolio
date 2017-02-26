@@ -62,6 +62,25 @@ background: none;
 .work-button{
   cursor: pointer;
 }
+.page-footer {
+  margin: 20px 0;
+}
+.social {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.social-entry {
+  color: black;
+  text-align: center;
+}
+.social-entry i{
+  font-size: 24px;
+  color: #001233;
+  text-shadow: 3px 3px 3px #aaa;
+}
 @media(max-width:991px){
   .hidden-md-up {
     display: none;
