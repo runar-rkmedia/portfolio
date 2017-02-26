@@ -59,11 +59,23 @@ background: none;
   display: none;
 }
 
-picture{
+.work-button{
   cursor: pointer;
 }
 @media(max-width:991px){
-  .featured-item {
+  .hidden-md-up {
+    display: none;
+  }
+
+  .work-item-text h3{
+    margin-top: 0;
+  }
+
+  .work-item{
+    margin-top: 20px;
+  }
+
+  .work-item {
     display: flex;
     justify-content: space-between;
   }
@@ -81,7 +93,7 @@ picture{
     max-width: 100%;
   }
   .hidden-md-up {
-    /*display: block;*/
+    display: block;
   }
 }
 @media(max-width:767px){
